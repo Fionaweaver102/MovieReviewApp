@@ -1,0 +1,32 @@
+Tables Needed 
+- Users table 
+    * username :sting
+    * password :string 
+- MovieReviews table
+    * MovieTitle :string 
+    * Review :string 
+    * image :string 
+    * DatePublished :string 
+    * User_id : integer 
+
+Controller
+- Users_Controller
+- MovieReviews_Controller
+
+Model 
+- User 
+- MovieReview 
+
+Views 
+-
+
+What to do:
+- Get access to API for seeding 
+- Create Migrations 
+- Create Models with Relationships
+- Plan Routes for Controller
+- Build controller and views simultameously 
+
+
+
+
