@@ -1,0 +1,19 @@
+<h1>Edit Review for <%= @reviews.movie_title %>
+</h1>
+
+<p>
+  <%= @error %>
+</p>
+
+<form action="/reviews/<%=@reviews.id%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label>Movie_title</label>
+  <input type="text" name="review[movie_title]" value="<%= @reviews.movie_title %>">
+  <br>
+  <label>Review</label>
+  <textarea name="review[review_description]"><%= @reviews.review_description %></textarea>
+  <br>
+  <label>Image</label>
+  <input type="text" name="review[image]" value="<%= @reviews.image %>">
+  <button type="submit">Edit</button>
+</form>

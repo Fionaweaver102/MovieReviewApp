@@ -10,7 +10,7 @@ module NyTimesReviews
       reviews = JSON.parse(RestClient.get(URL))
 
       reviews["results"].each do |review|
-        @review = Review.new(movie_title: review["display_title"], review_description: review["summary_short"], image: review["multimedia"]["src"], date_published: review["publication_date"])
+        @review = Review.new(name: review["byline"], movie_title: review["display_title"], review_description: review["summary_short"], image: review["multimedia"]["src"], date_published: review["publication_date"])
         @review.save 
       end 
 

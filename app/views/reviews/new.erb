@@ -1,0 +1,23 @@
+<h1>Create A Review!</h1>
+
+<p>
+  <%= @error %>
+</p>
+
+<form action="/reviews/new" method="post">
+  <label>Full Name</label>
+  <input type="text" name="name">
+  <br>
+  <label>Movie_title</label>
+  <input type="text" name="movie_title">
+  <br>
+  <label>Review</label>
+  <textarea name="review_description"></textarea>
+  <br>
+  <label>Image</label>
+  <input type="text" name="image">
+  <br>
+  <label>Date</label>
+  <input type="text" name="date_published">
+  <button type="submit">Submit</button>
+</form>

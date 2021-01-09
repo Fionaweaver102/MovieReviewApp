@@ -1,12 +1,14 @@
 <h1> Welcome to Movie Reviews! <h1>
     <h2> See some descriptions on your favorite movies, or even make your own reviews!</h2>
+      <a href="/reviews/new">Create a Review</a>
 
     <% @reviews.each do |review| %>
       <h2>
-        <%= review.movie_title %>
+        <a href="/reviews/<%= review.id %>"><%= review.movie_title %></a>
       </h2>
       <p>
         <%= review.review_description %>
       </p>
       <img src="<%= review.image %>" alt="review">
+      <a href="/reviews/<%= review.id %>/edit">Edit</a>
       <% end %>
