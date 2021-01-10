@@ -1,3 +1,4 @@
+
 <h1> Welcome to Movie Reviews! <h1>
     <h2> See some descriptions on your favorite movies, or even make your own reviews!</h2>
       <a href="/reviews/new">Create a Review</a>
@@ -7,8 +8,14 @@
         <a href="/reviews/<%= review.id %>"><%= review.movie_title %></a>
       </h2>
       <p>
-        <%= review.review_description %>
+        By <%= review.name %>
       </p>
       <img src="<%= review.image %>" alt="review">
-      <a href="/reviews/<%= review.id %>/edit">Edit</a>
+      <% if review.user && session[:user_id]==review.user.id %>
+    <form action="/reviews/<%= review.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit">Delete Review</button>
+    </form>
+    <button><a href="/reviews/<%= review.id %>/edit">Edit Review</a></button>
+    <% end %>
       <% end %>

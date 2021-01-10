@@ -1,5 +1,17 @@
-<h1></h1>
-<form action="/reviews/<%= @reviews.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <button type="submit">Delete Review</button>
-</form>
+<h1>
+  <%= @reviews.movie_title %>
+</h1>
+
+<img src="<%= @reviews.image %>" alt="review">
+
+<h2>
+  <%= @reviews.review_description %>
+</h2>
+
+<h3>
+  By: <%= @reviews.name %>
+</h3>
+
+<h3>
+  Published <%= @reviews.date_published %>
+</h3>
