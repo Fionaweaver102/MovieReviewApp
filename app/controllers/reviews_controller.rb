@@ -5,13 +5,13 @@ class ReviewsController < ApplicationController
   end 
   
   get '/reviews/new' do 
+    require_login
     erb :'reviews/new'
   end 
 
   post '/reviews/new' do 
     reviews = current_user.reviews.build(params)
-    if !reviews.movie_title.empty? && !reviews.review_description.empty?
-      reviews.save
+    if reviews.save 
       redirect '/reviews'
     else 
       @error = "Sorry, invalid data, please try again!"
@@ -25,7 +25,7 @@ class ReviewsController < ApplicationController
   end 
 
   get '/reviews/:id' do 
-    @reviews = Review.find_by(params[:id])
+    @reviews = Review.find_by(id: params[:id])
     if @reviews
     erb :'reviews/show'
     else 
