@@ -16,9 +16,10 @@
   <body>
     <div>
       <div>
+      <% if logged_in? %>
       <div><a href="/reviews">Reviews</a></div>
-      <div><a href="/home">Home</a></div>
       <div><a href="/logout">Logout</a></div>
+      <%end%>
     </div>
     <div class="wrapper">
 
