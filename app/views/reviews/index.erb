@@ -1,21 +1,26 @@
+  <h1>Reviews</h1>
+    <h2><button><a href="/reviews/new">Create a Review</a></button></h2>
+    
+<div class="index-page">
+      <% @reviews.each do |review| %>
+      <div class="review-card">
+          <h2>
+             <a href="/reviews/<%= review.id %>"><%= review.movie_title %></a><br>
+           </h2>
+          <p>
+             By <%= review.name %><br>
+          </p>
+        <img src="<%= review.image %>" alt="review"><br>
 
-<h1> Welcome to Movie Reviews! <h1>
-    <h2> See some descriptions on your favorite movies, or even make your own reviews!</h2>
-      <a href="/reviews/new">Create a Review</a>
+        <% if review.user && session[:user_id]==review.user.id %>
+        <form action="/reviews/<%= review.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit">Delete Review</button>
+        </form> 
 
-    <% @reviews.each do |review| %>
-      <h2>
-        <a href="/reviews/<%= review.id %>"><%= review.movie_title %></a>
-      </h2>
-      <p>
-        By <%= review.name %>
-      </p>
-      <img src="<%= review.image %>" alt="review">
-      <% if review.user && session[:user_id]==review.user.id %>
-    <form action="/reviews/<%= review.id %>" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <button type="submit">Delete Review</button>
-    </form>
-    <button><a href="/reviews/<%= review.id %>/edit">Edit Review</a></button>
+        <button><a href="/reviews/<%= review.id %>/edit">Edit Review</a></button>
+
+        <% end %>
+        </div>
     <% end %>
-      <% end %>
+  </div>

@@ -1,10 +1,14 @@
+<div class="login">
 <h1>Login</h1>
 
 <p>
   <%= @error %>
 </p>
 <form action='/login' method='post'>
+<label>UserName</label>
   <input type="text" name="username">
+<label>Password</label>
   <input type="password" name="password_digest">
   <button type="submit">Login</button>
 </form>
+</div>

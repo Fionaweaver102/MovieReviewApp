@@ -1,18 +1,19 @@
+<div class="show-page">
+  <h1>
+    <%= @reviews.movie_title %>
+  </h1>
 
-<h1>
-  <%= @reviews.movie_title %>
-</h1>
+  <img src="<%= @reviews.image %>" alt="review">
 
-<img src="<%= @reviews.image %>" alt="review">
+  <h2>
+    <%= @reviews.review_description %>
+  </h2>
 
-<h2>
-  <%= @reviews.review_description %>
-</h2>
+  <h3>
+    By: <%= @reviews.name %>
+  </h3>
 
-<h3>
-  By: <%= @reviews.name %>
-</h3>
-
-<h3>
-  Published <%= @reviews.date_published %>
-</h3>
+  <h3>
+    Published <%= @reviews.date_published %>
+  </h3>
+</div>

@@ -1,8 +1,9 @@
 Tables Needed 
 - Users table 
-    * username :sting
+    * username :string
     * password :string 
 - MovieReviews table
+    * Name :string 
     * MovieTitle :string 
     * Review :string 
     * image :string 
@@ -12,20 +13,22 @@ Tables Needed
 Controller
 - Users_Controller
 - MovieReviews_Controller
+- SessionsController
 
 Model 
 - User 
-- MovieReview 
+- Review 
 
 Views 
--
+- Reviews 
+    * index
+    * new 
+    * show
+    * edit 
+- Users 
+    * login 
+    * signup 
 
-What to do:
-- Get access to API for seeding 
-- Create Migrations 
-- Create Models with Relationships
-- Plan Routes for Controller
-- Build controller and views simultameously 
 
 
 

@@ -15,10 +15,11 @@
   </head>
   <body>
     <div>
-      <div>
+      <div class= "header">
       <% if logged_in? %>
-      <div><a href="/reviews">Reviews</a></div>
-      <div><a href="/logout">Logout</a></div>
+      <div><button><a href="/myreviews">My Reviews</a></button></div>
+      <div><button><a href="/reviews">Reviews</a></div>
+      <div><button><a href="/logout">Logout</a></button></div>
       <%end%>
     </div>
     <div class="wrapper">

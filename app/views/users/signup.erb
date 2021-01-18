@@ -1,8 +1,12 @@
+<div class="singup">
 <h1>Create an Account</h1>
 
 <p><%= @error %></p>
 <form action="/signup" method="post">
+<label>UserName</label>
   <input type="text" name="username">
+<label>Password</label>
   <input type="password" name="password_digest">
   <button type="submit">Create Account</button>
 </form>
+</div>

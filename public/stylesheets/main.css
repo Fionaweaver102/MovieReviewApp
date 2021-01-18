@@ -1,5 +1,72 @@
-body {
-  background-color: peru
+h1 {
+  background-color: black;
+  color: white;
+  padding:15.6px;
+  text-align: center;
+  display:block
 }
 
+body {
+  background-image: url(https://www.twosisterscrafting.com/wp-content/uploads/2016/01/how-to-make-the-perfect-popcorn-pinnable5-720x540.jpg)
+}
+
+.header div {
+  padding: 20px
+}
+.header div button {
+  background: black;
+  box-sizing: 30px;
+}
+
+.header div button a {
+  color: white;
+}
+
+
+.header {
+  display: flex;
+}
+
+.wrapper {
+  background-color: rosybrown;
+  padding: 50px;
+}
+
+.index-page {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 20px;
+}
+
+.review-card {
+  padding: 10px;
+  background-color: rgb(207, 136, 136);
+}
+
+.review-card img {
+  width: 100%
+}
+
+.wrapper button {
+  background: black;
+  color: white 
+}
+
+.wrapper button a {
+  color: white;
+}
+
+ h2 button {
+  padding: 20px;
+}
+
+.review-card h2 a {
+  color: white
+}
+
+/* .index-page {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  
+} */
 

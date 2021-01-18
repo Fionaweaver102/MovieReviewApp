@@ -15,4 +15,9 @@ class UsersController < ApplicationController
     end 
   end 
 
+  get '/myreviews' do 
+    @reviews = current_user.reviews
+    erb :'/reviews/index'
+  end 
+
 end 
